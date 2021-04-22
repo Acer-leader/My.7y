@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>万年历</title>
+		<style>
+			table tr:nth-child(odd) {
+				background-color: #eee;
+			}
+			table tr:nth-child(even) {
+				background-color: #F3C98F;
+			}
+			table tr:first-child {
+				background-color: skyblue;
+			}
+			table tr:nth-child(2) {
+				background-color: lightpink;
+			}
+			.active {
+				background-color: darkred;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="date" id="calendar" placeholder="请按2020/8/18的格式输入日期">
+		<button id="btn">提交</button>
+		<table border="1px" cellspacing="0">
+			<tbody id="table">
+			</tbody>
+		</table>
+		<script>
+			//设置点击事件，提交值
+			var btn = document.getElementById('btn');
+			btn.onclick = function(){
+				let dateStr = document.getElementById('calendar').value;
+				console.log(dateStr);
+				getCalendar(dateStr);
+			}
+			
+			//获得日历
+			function getCalendar(dateStr){
+				let arrD = dateStr.split('-'); 
+				//月份是0-11
+				let date = new Date(arrD[0],arrD[1]-1,arrD[2]);
+				//获取该月第几天
+				let day = date.getDate();
+				//获得该月总天数,当设置最后一个参数为0时，getDate()就是获取本月总天数
+				let days = new Date(arrD[0],arrD[1]-1,0).getDate();
+				//获得该月第一天是星期几
+				let week = new Date(arrD[0],arrD[1]-1,+1).getDay();
+				if(week == 0) {//周日是0，这里把周一至周日改为1-7，方便后面遍历
+					week = 7;
+				}
+				//拼接前部分表格头
+				let htmlStr = `
+					<tr>
+						<th colspan="2">`+dateStr+`</th>
+						<th colspan="3">万年历</th>
+						<th colspan="2">周末</th>
+					</tr>
+					<tr>
+						<th>星期一</th>
+						<th>星期二</th>
+						<th>星期三</th>
+						<th>星期四</th>
+						<th>星期五</th>
+						<th>星期六</th>
+						<th>星期天</th>
+					</tr>
+				`;
+				//第一天为星期几，前面就要空几列
+				let count = week-1;//用于计数，达到7需要另起一列
+				htmlStr+='<tr>';
+				for(let i=1;i<week;i++){
+					htmlStr+='<td></td>';
+				}
+				//拼接日历
+				for(let i=1;i<=days;i++){
+					if(count == 7){
+						count = 0;
+						htmlStr+='</tr>';
+						htmlStr+='<tr>';
+					}
+					if(i == day){
+						htmlStr+='<td class="active">'+i+'</td>';
+					}else{
+						htmlStr+='<td>'+i+'</td>';
+					}
+					count++;
+				}
+				//补上余下的空列，表格更好看些
+				if(count<7){
+					for(;count<7;count++){
+						htmlStr+='<td></td>';
+					}
+					htmlStr+='</tr>';
+				}
+				//修改表格内容
+				let table = document.getElementById('table');
+				table.innerHTML = htmlStr;
+			}
+			
+		</script>
+	</body>
+</html>
+
