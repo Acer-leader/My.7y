@@ -43,19 +43,20 @@
             /*border: 1px solid black;*/
             width: 250px;
             display: inline-block;
-            padding: 10px;
+            padding: 6px;
             text-indent: 20px;
+			margin-left: 3%;
             /*letter-spacing: 2px;*/
         }
         .container{
             border:1px solid skyblue;
             width: 800px;
-            height: 1500px;
+            height: 2500px;
             background-color: #eeeeff;
             margin: auto;
         }
         .baseinfo{
-            height: 16%;
+            height: 11.6%;
         }
         .info{
             width: 600px;
@@ -70,16 +71,16 @@
             margin: 10px 14px auto 6px;
         }
         .education{
-            height: 12%;
+            height: 6%;
         }
         .experience{
-            height: 34%;
+            height: 48%;
         }
         .skills{
-            height: 15%;
+            height: 18.4%;
         }
         .me{
-            height: 15%;
+            height: 2%;
         }
         .line{
             width:760px;
@@ -89,11 +90,10 @@
             letter-spacing: 2px;
             text-indent: 10px;
             line-height: 40px;
-            font-size: 20px;
+            font-size: 16px;
             margin:10px 18px 0 18px;
         }
         .linetitle{
-            color: cadetblue;
             font-size: 16px;
             margin-left: 20px;
         }
@@ -110,7 +110,7 @@
             text-align: right;
         }
         .text{
-            text-indent: 30px;
+            text-indent: 20px;
  
         }
         .text:before{
@@ -125,62 +125,103 @@
     <div class="container">
         <div class="baseinfo">
             <div class="info">
-                <p style="font-size: 30px;color: lightseagreen;font-weight: bold">王辉</p><br>
-                <p>求职意向：PHP开发</p><br>
-                <p>生日：1991.02.13</p> 
-                <p>手机：15711184303</p><br>
-                <p>民族：汉族</p> 
-                <p>邮箱：y1wanghui@163.com</p><br> 
-                <p>工作年限：2016.07-至今</p>
+                <p style="font-size: 30px;color: lightseagreen;font-weight: bold;margin-left: 50%;">PHP开发</p><br>
+					<div class="line">个人信息/Personal Information</div>
+					<p>姓名：王辉</p><br>
+					<p>出生年月： 1991.02</p><br>
+					<p>手机：15711184303</p><br>
+					<p>邮箱：y1wanghui@163.com</p><br>	
+					<p>期望月薪 8k-10k</p><br />
+					<p>工作年限：2016.07-至今</p>
             </div>
- 
         </div>
  
         
         <div class="education">
             <div class="line">教育经历/Education</div>
-            <div>
+            <div style="margin-left: 3%;">
                 <p class="linetitle"><span>2011.09-2015.06</span>  <span>陇东学院</span>  <span>数学与应用数学/本科</span></p>
+				<p class="linetitle">专业: 数学与应用数学</p>
+				<p class="linetitle">主修课程： 数学建模，数学分析，概率论与数理统计,数学计算机应用等</p>
             </div>
         </div>
-         <div class="skills">
+        <div class="skills">
             <div class="line">个人技能/Personal Skills</div>
- 
-            <div>
-                <p class="text">技能</p>
-                <p class="text">技能</p>
-                <p class="text">技能</p>
-                <p class="text">技能</p>
+            <div class="skills-info" style="margin-left: 3%;">
+                <p class="text">熟练掌握PHP开发语言.</p>
+                <p class="text">熟悉 tp5,laravel,开发 web前后台API开发</p>
+                <p class="text">了解 nosql 产品,如redis.</p>
+                <p class="text">熟悉网站打包成安卓安装包，laravel下Homestead 的配置协同开发.</p>
+				<p class="text">熟悉LINUX常用命令,操作宝塔Linux，环境安装，Supervisor进程常驻;crontab定时任务等.</p>
+				<p class="text">掌握Jquery与Ajax结合的异步更新及 JavaScript、Json、HTML 及 DIV+CSS 控件在 WEB上的应用.</p>
+				<p class="text">快速搭建微信公众号，微信小程序，接口开发.</p>
+				<p class="text">熟练运用MySQL及Navicat等客户端工具，了解数据库表结构的设计优化，查询优化，存储优化等.</p>
+				<p class="text">熟练使用 Git,具有良好编程习惯.</p>
+				<p class="text">网站二次开发，网站开发测试到上线，ssl 证书在 iis，linux 下的安装.</p>
             </div>
         </div>
         <div class="experience">
             <div class="line">工作经历/Experience</div>
             <div>
-                <p class="linetitle"><span>20XX.05-20XX.03</span>   <span>XX公司</span>  <span>XX工程师</span></p>
-                <p class="text">负责</p>
-                <p class="text">负责</p>
-                <p class="text">负责</p>
-                <p class="text">负责</p>
-                <p class="text">负责</p>
+                <p class="linetitle"><span>2017.02 – 2019.01</span>   <span>杭州宸豪网络科技有限公司</span>  <span>PHP工程师</span></p>
+               <div style="width: 95%;margin-left: 3%;line-height: 140%;">
+					1.网站：www.guirend.cn
+					<br>项目描述：本项目使用 tp3,一个 p2p 网贷线上网站，主要是针对的客户群体为人脉资源，主要有客户的管理系统，
+					后台管理系统，公司认证系统，签到，会员，积分兑换，自己可参与投标，也可以进行贷款。
+					责任描述: 管理员的权限认证（管理员管理、业务员管理、角色管理），用户的签到奖励，积分兑换模块，会员注
+					册，微信公众号开发，个人中心管理（信息修改，积分查看），金额充值（资料上传，审核管理），后期网站的维护。
+					<br><br>2.贵人贷推广活动
+					<br>网站：http://xiaobaiguirend.cn/
+					项目描述:针对的是贵人贷 p2p 平台,数据库的扩充，为贵人贷找到合适的资源，活动网站的后台设置，活动的设
+					置，转盘抽奖功能，充值功能，投标功能。
+					责任描述:活动网站的后台开发，添加活动页面功能，转盘抽奖功能，抽奖概率调节的功能。
+					<br><br>3.沁酿商贸
+					项目描述：沁酿商贸是一个专门服务于酒业，供货平台,该项目分为 PC 端,微信端,用户的类型有后台管理员,个人用
+					户，包括商品列表,商品分类、购物车、个人用户中心、邮件注册,支付宝支付等. 责任描述 ：后台管理员，用户，商品的 CURD，用户的个人中心管理(交易收货管理,收货地址,个人中心)购物车,邮件注册找回密码功能 ,支付宝的支付功能.
+					<br><br><br>等网站以及后期维护！
+               </div>
             </div>
- 
             <div>
-                <p class="linetitle"><span>20XX.04-今</span>  <span>XX公司</span>   <span>XX岗位</span></p>
-                <p class="text">负责</p>
-                <p class="text">负责</p>
-                <p class="text">负责</p>
-                <p class="text">负责</p>
+                <p class="linetitle"><span>2019.03 – 2020.03</span>  <span>深圳市东晖网络科技有限公司</span>   <span>PHP工程师</span></p>
+			    <div style="width: 95%;margin-left: 3%;line-height: 140%;"><strong></strong>
+                1.https://www.qegzw.com/
+                <br>项目描述：二次开发，门户装修，招标，商家入驻，城市切换，招标添加，短信通知等。
+                责任描述：推广活动页面制作。PC 端网站，手机端 wap 全新改版。添加短信功能对接第三方短信平台，数据库
+                上传图片字段添加。企鹅公装网微信小程序申请注册，绑定小程序。
+                公装网派单小程序：对接后台 PC 端网站，PC 可派单，小程序也可以派单，不同城市的城市经理只能看自己所在
+                城市订单，订单电话不可见，权限的设置。
+                <br><br>2.接单工具小程序：对接前台商家入驻，商家入驻专项接单工具，修改账户，密码，申请入驻相关。
+                <br><br>3.晨风佳怡装饰工程有限公司 OA
+                <br>网站:oa.qegzw.com
+                <br>项目描述：开源 oa 系统二次开发定制。
+                <br>责任描述：人员打卡，对接微信定位打卡，属于个人的装修案例图库为谈客户便捷使用。按照装修公司需求增加，
+                删除，修改相关操作。打包成安卓 app 方便使用。
+				
+				<br><br>等等以及网站后期维护，服务器维护。
+				</div>
             </div>
+			
+			<div>
+			    <p class="linetitle"><span>2020.03 – 至今</span>  <span>西安灵猫电子科技有限公司</span>   <span>PHP工程师</span></p>
+			    <div style="width: 95%;margin-left: 3%;line-height: 140%;"><strong></strong>
+			    网站：https://www.der-matech.com.cn/<br>http://www.jiuyelan.com/<br>http://www.lingmaodianshang.com/index.html等自有网站，模版二次开发以及客户反应的bug处理！
+			    <br><br>现有项目的维护，公司的4台服务器规划，外包网站的，域名申请，备案，开发到上线.
+			    <br><br>推广网站模版制作，客户网站反馈的bug。
+				<br><br>后期任务主要包括同事电脑问题，技术问题，客户反应技术问题，增加网站的功能修改，协助运营人员，直播人员完成后期订单的需要修改问题等！
+				</div>
+			</div>
         </div>
  
         <div class="me">
             <div class="line">自我评价/About Me</div>
  
             <div>
-                <p class="text">本人</p>
-                <p class="text">本人</p>
-                <p class="text">本人</p>
-                <p class="text">本人</p>
+                <p class="text">爱工作，善于思考 , 对新的技术比较感兴趣；</p>
+                <p class="text">具有团队意识,适应新环境与同事互相交流学习,互相提升。</p>
+                <p class="text">强烈的求知欲,较强的学习能力以及良好的自我认知。全面的技能与开阔的视野,良好的心态、沟通能力。</p>
+                <p class="text">gitee，https://gitee.com/y1y2</p>
+				<p class="text">看云文档，https://www.kancloud.cn/y7y7_y7/v_1_1studyphp/</p>
+				
             </div>
         </div>
  
